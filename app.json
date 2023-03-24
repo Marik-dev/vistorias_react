@@ -2,6 +2,14 @@
   "expo": {
     "name": "Vistorias",
     "slug": "Vistorias",
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Deseja permitir o nosso aplicativo acessar sua câmera?"
+        }
+      ]
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,13 +26,30 @@
       "supportsTablet": true
     },
     "android": {
+      "softwareKeyboardLayoutMode": "pan",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.localsig.geosabesp_app",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "83523361-a722-475e-952d-d01373d3dc9a"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/83523361-a722-475e-952d-d01373d3dc9a"
     }
   }
 }
